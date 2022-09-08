@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in </title>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+
+</head>
+
+<body>
+    <div class="container my-5">
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<h2 style="text-align: center">Login</h2>
+	
+				<form method="POST" action="/users/login">
+					<div class="row">
+						<div class="col-md-6 my-2">
+							<div class="form-group">
+								<label><b>Correo electrónico:</b></label>
+								<input type="text" name="email" class="form-control">
+								<% if (locals.errors && errors.email) { %>
+									<div class="text-danger">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="col-md-6 my-2">
+							<div class="form-group">
+								<label><b>Password:</b></label>
+								<input type="password" name="password" class="form-control">
+								<div class="invalid-feedback">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 my-2">
+							<div class="form-group form-check">
+								<label class="form-check-label">
+									<input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+								</label>
+							</div>
+						</div>
+						<div class="col-12 my-3">
+							<button type="submit" class="btn btn-primary">Loguearme</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

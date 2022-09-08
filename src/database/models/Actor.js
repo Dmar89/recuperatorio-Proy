@@ -6,7 +6,8 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-    
+        // created_at: dataTypes.TIMESTAMP,
+        // updated_at: dataTypes.TIMESTAMP,
         first_name: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -38,6 +39,7 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         })
     }
-   
+    //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
+
     return Actor
 };
