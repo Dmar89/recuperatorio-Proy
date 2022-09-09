@@ -29,7 +29,7 @@ const validateMovie = [
     body('awards').isNumeric().withMessage('Por favor ingresar un valor numerico'),
 
     body('release_date').notEmpty().withMessage('Por favor ingrese una fecha'),
-    // body('awards').isDate isNumeric().withMessage('Por favor ingresar un valor numerico'),
+   
     
     body('genre_id').notEmpty().withMessage('Por favor ingrese un genero'),
   ];

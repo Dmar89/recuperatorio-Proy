@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let userController = require('../controllers/usersController.js');
-// let multer = require('multer');
+
 let path = require('path');
 const db = require('../database/models');
 const guest = require('../middlewares/guest');
